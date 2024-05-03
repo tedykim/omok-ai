@@ -7,10 +7,10 @@ from tqdm import tqdm
 Dataset from https://gomocup.org/results/
 '''
 game_rule = 'Freestyle' # Freestyle, Fastgame, Standard, Renju
-base_path = '/Users/brad/Downloads/gomocup2019results'
+base_path = 'D:/dev_D/DeepLearning/omok/omok-ai/dataset/gomocup2019results'
+ # 원래 경로 ///Users/brad/Downloads/gomocup2019results'
 output_path = os.path.join('dataset', os.path.basename(base_path))
 os.makedirs(output_path, exist_ok=True)
-
 file_list = glob(os.path.join(base_path, '%s*/*.psq' % (game_rule, )))
 
 for index, file_path in enumerate(tqdm(file_list)):

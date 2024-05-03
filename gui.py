@@ -1,9 +1,11 @@
 from ursina import *
-import numpy as np
-from tensorflow.keras.models import load_model
+import numpy as np   
+import tensorflow  
+# from tensorflow.keras.models import load_model
+# int
 from gomoku import Board, Gomoku
 
-model = load_model('models/20201213_202430.h5')
+model = load_model('D:/dev_D/DeepLearning/omok/omok-ai/models/20201213_202430.h5')
 
 app = Ursina()
 
@@ -85,3 +87,12 @@ def end_session(won_player):
     t.create_background(padding=(.5,.25), radius=Text.size/2)
 
 app.run()
+
+'''     TensorFlow 관련 시스템변수를 일단 수정함..
+제어판을 엽니다.
+시스템 및 보안 > 시스템 > 고급 시스템 설정을 선택합니다.
+"고급" 탭에서 "환경 변수"를 클릭합니다.
+시스템 변수 중에 'TF_ENABLE_ONEDNN_OPTS'라는 이름의 변수를 찾습니다.
+해당 변수를 선택하고 "편집"을 클릭합니다.
+변수 값을 '0'으로 설정하고 확인을 클릭합니다.
+'''

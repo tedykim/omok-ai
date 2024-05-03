@@ -4,7 +4,7 @@ class Board():
     def __init__(self, w, h):
         self.w = w
         self.h = h
-        self.board = np.zeros((self.h, self.w), dtype=np.int)
+        self.board = np.zeros((self.h, self.w), dtype=int)  # np.int > int 일단 수정함.
 
     def __repr__(self):
         string = ''
